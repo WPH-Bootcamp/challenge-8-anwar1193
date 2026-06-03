@@ -23,7 +23,7 @@ export const TrustedBrands: React.FC = () => {
   ];
 
   return (
-    <section className="py-10 bg-white border-b border-gray-100">
+    <section className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p className="text-gray-400 font-semibold mb-8 text-xs md:text-sm tracking-wider">
           Trusted by Global Innovators & Leading Brands
