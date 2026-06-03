@@ -25,13 +25,13 @@ export type ButtonVariant = 'primary' | 'secondary' | 'outline';
  * Example: Button Props
  * Uncomment dan sesuaikan dengan kebutuhan
  */
-// export interface ButtonProps {
-//   variant?: ButtonVariant;
-//   children: React.ReactNode;
-//   onClick?: () => void;
-//   className?: string;
-//   disabled?: boolean;
-// }
+export interface ButtonProps {
+  variant?: ButtonVariant;
+  children: React.ReactNode;
+  onClick?: () => void;
+  className?: string;
+  type?: 'button' | 'submit' | 'reset';
+}
 
 // ==========================================
 // Section Data Types
@@ -50,72 +50,41 @@ export type ButtonVariant = 'primary' | 'secondary' | 'outline';
 /**
  * Example: Service/Product Item
  */
-// export interface ServiceItem {
-//   id: number;
-//   title: string;
-//   description: string;
-//   icon?: string;
-//   image?: string;
-// }
+export interface ServiceItem {
+  id: string;
+  title: string;
+  description: string;
+  icon: string; // fallback string path atau nama ikon
+}
 
-/**
- * Example: Team Member
- */
-// export interface TeamMember {
-//   id: number;
-//   name: string;
-//   position: string;
-//   bio?: string;
-//   image: string;
-//   socialLinks?: {
-//     linkedin?: string;
-//     twitter?: string;
-//     github?: string;
-//   };
-// }
+export interface ProcessStep {
+  stepNumber: number;
+  title: string;
+  description: string;
+}
 
-/**
- * Example: Testimonial
- */
-// export interface Testimonial {
-//   id: number;
-//   name: string;
-//   position: string;
-//   company: string;
-//   message: string;
-//   avatar?: string;
-//   rating?: number;
-// }
+export interface ProjectItem {
+  id: string;
+  title: string;
+  category: string;
+  image: string;
+}
 
-// ==========================================
-// Navigation Types
-// ==========================================
+export interface TestimonialItem {
+  id: string;
+  name: string;
+  role: string;
+  company: string;
+  avatar: string;
+  rating: number;
+  comment: string;
+}
 
-/**
- * Navigation menu item
- */
-// export interface NavItem {
-//   label: string;
-//   href: string;
-//   external?: boolean;
-// }
-
-// ==========================================
-// Form Types (if needed)
-// ==========================================
-
-/**
- * Contact form data
- */
-// export interface ContactFormData {
-//   name: string;
-//   email: string;
-//   message: string;
-// }
-
-// ==========================================
-// TODO: Add more types as needed!
-// ==========================================
+export interface FAQItem {
+  id: string;
+  question: string;
+  answer: string;
+}
 
 /**
  * Tips:
