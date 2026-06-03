@@ -2,6 +2,7 @@
 import React from 'react';
 import { Navbar } from '../components/layout/Navbar';
 import { Hero } from '../components/sections/Hero';
+import { TrustedBrands } from '../components/sections/TrustedBrands';
 
 export const Home: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ export const Home: React.FC = () => {
       <Navbar />
       <main>
         <Hero />
+        <TrustedBrands />
       </main>
     </div>
   );
