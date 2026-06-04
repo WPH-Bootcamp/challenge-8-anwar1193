@@ -1,16 +1,27 @@
 // src/data/mockData.ts
 import type { ServiceItem, ProcessStep, ProjectItem, TestimonialItem, FAQItem } from '../types';
 
+// Import 9 ikon dari folder assets
+import iconWeb from '../assets/icon-web.png';
+import iconMobile from '../assets/icon-mobile.png';
+import iconUiUx from '../assets/icon-uiux.png';
+import iconCloud from '../assets/icon-cloud.png';
+import iconSoftware from '../assets/icon-software.png';
+import iconInfra from '../assets/icon-infra.png';
+import iconCyber from '../assets/icon-cyber.png';
+import iconQa from '../assets/icon-qa.png';
+import iconConsult from '../assets/icon-consult.png';
+
 export const servicesData: ServiceItem[] = [
-  { id: '1', title: 'Web Development', description: 'Build fast, scalable, and SEO-friendly websites.', icon: '🌐' },
-  { id: '2', title: 'Mobile App Development', description: 'Native & cross-platform apps tailored to user needs.', icon: '📱' },
-  { id: '3', title: 'UI/UX Design', description: 'Delight users with intuitive and beautiful interfaces.', icon: '🎨' },
-  { id: '4', title: 'Cloud Solutions', description: 'Secure and flexible cloud infrastructure for your growth.', icon: '☁️' },
-  { id: '5', title: 'Software Development', description: 'Custom solutions built around your business logic.', icon: '💻' },
-  { id: '6', title: 'IT Infrastructure', description: 'Scale your backend with reliable tech foundations.', icon: '⚙️' },
-  { id: '7', title: 'Cybersecurity Services', description: 'Stay protected with enterprise-grade security.', icon: '🛡️' },
-  { id: '8', title: 'QA Solutions', description: 'Ensure performance with rigorous testing frameworks.', icon: '🔍' },
-  { id: '9', title: 'IT Consulting & Support', description: 'Make smarter tech decisions with expert guidance.', icon: '🎧' },
+  { id: '1', title: 'Web Development', description: 'Build fast, scalable, and SEO-friendly websites.', icon: iconWeb },
+  { id: '2', title: 'Mobile App Development', description: 'Native & cross-platform apps tailored to user needs.', icon: iconMobile },
+  { id: '3', title: 'UI/UX Design', description: 'Delight users with intuitive and beautiful interfaces.', icon: iconUiUx },
+  { id: '4', title: 'Cloud Solutions', description: 'Secure and flexible cloud infrastructure for your growth.', icon: iconCloud },
+  { id: '5', title: 'Software Development', description: 'Custom solutions built around your business logic.', icon: iconSoftware },
+  { id: '6', title: 'IT Infrastructure', description: 'Scale your backend with reliable tech foundations.', icon: iconInfra },
+  { id: '7', title: 'Cybersecurity Services', description: 'Stay protected with enterprise-grade security.', icon: iconCyber },
+  { id: '8', title: 'QA Solutions', description: 'Ensure performance with rigorous testing frameworks.', icon: iconQa },
+  { id: '9', title: 'IT Consulting & Support', description: 'Make smarter tech decisions with expert guidance.', icon: iconConsult },
 ];
 
 export const processSteps: ProcessStep[] = [
