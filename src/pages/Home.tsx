@@ -5,6 +5,8 @@ import { Hero } from '../components/sections/Hero';
 import { TrustedBrands } from '../components/sections/TrustedBrands';
 import { Process } from '../components/sections/Process';
 import { Services } from '../components/sections/Services';
+import { Showcase } from '../components/sections/Showcase';
+import { Testimonials } from '../components/sections/Testimonials';
 
 export const Home: React.FC = () => {
   return (
@@ -15,6 +17,8 @@ export const Home: React.FC = () => {
         <TrustedBrands />
         <Process />
         <Services />
+        <Showcase />
+        <Testimonials />
       </main>
     </div>
   );

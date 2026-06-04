@@ -1,6 +1,10 @@
 // src/data/mockData.ts
 import type { ServiceItem, ProcessStep, ProjectItem, TestimonialItem, FAQItem } from '../types';
 
+import portfolio1 from '../assets/portfolio-1.png';
+import portfolio2 from '../assets/portfolio-2.png';
+import portfolio3 from '../assets/portfolio-3.png';
+
 // Import 9 ikon dari folder assets
 import iconWeb from '../assets/icon-web.png';
 import iconMobile from '../assets/icon-mobile.png';
@@ -34,21 +38,57 @@ export const processSteps: ProcessStep[] = [
 ];
 
 export const projectsData: ProjectItem[] = [
-  { id: '1', title: 'Portofolio 1', category: 'Landing Page', image: '/assets/project1.jpg' },
-  { id: '2', title: 'Portofolio 2', category: 'Landing Page', image: '/assets/project2.jpg' },
-  { id: '3', title: 'Portofolio 3', category: 'Landing Page', image: '/assets/project3.jpg' },
+  {
+    id: '1',
+    title: 'Portofolio 1',
+    category: 'Landing Page',
+    image: portfolio1,
+    link: '#'
+  },
+  {
+    id: '2',
+    title: 'Portofolio 2',
+    category: 'Landing Page',
+    image: portfolio2,
+    link: '#'
+  },
+  {
+    id: '3',
+    title: 'Portofolio 3',
+    category: 'Landing Page',
+    image: portfolio3,
+    link: '#'
+  }
 ];
 
 export const testimonialsData: TestimonialItem[] = [
   {
     id: '1',
+    name: 'John Lee',
+    role: 'Director',
+    company: 'Innovate Corp',
+    stars: 5,
+    content: '“A game-changer for our project. They took our complex legacy architecture and turned it into reality efficiently and effectively.”',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
+  },
+  {
+    id: '2',
     name: 'Sarah Tan',
     role: 'Product Manager',
     company: 'Finovate',
-    avatar: '/assets/avatar-sarah.jpg',
-    rating: 5,
-    comment: 'The team delivered exactly what we needed — on time and with outstanding quality. Their attention to detail and communication were top-notch.',
+    stars: 5,
+    content: '“The team delivered exactly what we needed — on time and with outstanding quality. Their attention to detail and communication were top-notch.”',
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face'
   },
+  {
+    id: '3',
+    name: 'Emily Chen',
+    role: 'Marketing Head',
+    company: 'TechSphere',
+    stars: 5,
+    content: '“The collaboration was seamless, and the final output exceeded our expectations. Their expertise truly brought a massive impact to our successful project.”',
+    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face'
+  }
 ];
 
 export const faqData: FAQItem[] = [

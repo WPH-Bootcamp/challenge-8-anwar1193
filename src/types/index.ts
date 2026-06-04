@@ -68,6 +68,7 @@ export interface ProjectItem {
   title: string;
   category: string;
   image: string;
+  link?: string;
 }
 
 export interface TestimonialItem {
@@ -75,9 +76,9 @@ export interface TestimonialItem {
   name: string;
   role: string;
   company: string;
+  stars: number;
+  content: string;
   avatar: string;
-  rating: number;
-  comment: string;
 }
 
 export interface FAQItem {

@@ -59,7 +59,7 @@ export const Services: React.FC = () => {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`text-lg font-bold capitalize transition-all border-l-2 -ml-[18px] pl-4 ${
+                  className={`text-lg font-bold capitalize transition-all border-l-2 -ml-4.5 pl-4 ${
                     activeTab === tab ? 'text-black border-[#FF6433]' : 'text-gray-400 border-transparent'
                   }`}
                 >
@@ -76,7 +76,7 @@ export const Services: React.FC = () => {
                     We build secure, scalable, and compliant fintech solutions — from digital wallets to core banking systems — tailored to modern financial needs.
                   </p>
                   {/* 2. Mengganti kode tiruan lama dengan tag img dari aset lokal */}
-                  <div className="w-full aspect-[21/9] rounded-2xl overflow-hidden shadow-sm">
+                  <div className="w-full aspect-21/9 rounded-2xl overflow-hidden shadow-sm">
                     <img 
                       src={fintechImg} 
                       alt="Fintech Industry Showcase" 
@@ -92,7 +92,7 @@ export const Services: React.FC = () => {
                     Omnichannel retail platforms engineered for high traffic, seamless conversions, and frictionless payments globally.
                   </p>
                   {/* Gambar untuk E-Commerce */}
-                  <div className="w-full aspect-[21/9] rounded-2xl overflow-hidden shadow-sm">
+                  <div className="w-full aspect-21/9 rounded-2xl overflow-hidden shadow-sm">
                     <img 
                       src={ecommerceImg} 
                       alt="E-Commerce Industry Showcase" 
@@ -108,7 +108,7 @@ export const Services: React.FC = () => {
                     HIPAA-compliant platforms bridging telehealth systems, patient engagement portals, and real-time medical data syncing.
                   </p>
                   {/* Gambar untuk Healthcare */}
-                  <div className="w-full aspect-[21/9] rounded-2xl overflow-hidden shadow-sm">
+                  <div className="w-full aspect-21/9 rounded-2xl overflow-hidden shadow-sm">
                     <img 
                       src={healthcareImg} 
                       alt="Healthcare Industry Showcase" 
