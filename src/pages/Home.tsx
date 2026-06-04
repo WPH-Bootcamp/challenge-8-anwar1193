@@ -9,6 +9,7 @@ import { Showcase } from '../components/sections/Showcase';
 import { Testimonials } from '../components/sections/Testimonials';
 import { FAQ } from '../components/sections/FAQ';
 import { Contact } from '../components/sections/Contact';
+import { Footer } from '../components/sections/Footer';
 
 export const Home: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ export const Home: React.FC = () => {
         <FAQ />
         <Contact />
       </main>
+      <Footer />
     </div>
   );
 };

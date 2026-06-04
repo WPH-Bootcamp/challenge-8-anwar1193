@@ -1,14 +1,34 @@
 // src/components/layout/Navbar.tsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '../ui/Button';
 import logoSymbol from '../../assets/logo-symbol.png';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    // 1. Mengubah bg-white/80 menjadi bg-transparent agar gambar hero menembus hingga ke atas layar
-    <nav className="absolute top-0 left-0 w-full h-20 z-50 bg-transparent transition-all duration-300">
+    // PERUBAHAN DI SINI: border-b border-gray-100/50 telah dihapus
+    <nav 
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${
+        isScrolled 
+          ? 'bg-white/75 backdrop-blur-md h-20' 
+          : 'bg-transparent h-24'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
         
         {/* Logo Section */}
@@ -21,7 +41,7 @@ export const Navbar: React.FC = () => {
           <span className="tracking-tight">Your Logo</span>
         </div>
 
-        {/* Desktop Menu - Menggunakan text-gray-800 agar tetap kontras di kedua sisi */}
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 text-gray-800 font-semibold text-sm">
           <a href="#about" className="hover:text-[#FF6433] transition-colors">About</a>
           <a href="#service" className="hover:text-[#FF6433] transition-colors">Service</a>
@@ -32,7 +52,9 @@ export const Navbar: React.FC = () => {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Button variant="primary">Let's Talk</Button>
+          <a href="#contact" className="inline-block cursor-pointer">
+            <Button variant="primary">Let's Talk</Button>
+          </a>
         </div>
 
         {/* Mobile Hamburger */}
@@ -50,7 +72,7 @@ export const Navbar: React.FC = () => {
         </button>
       </div>
 
-      {/* Mobile Drawer - Tetap menggunakan background solid saat dibuka di mobile agar menu tidak pusing dibaca */}
+      {/* Mobile Drawer */}
       {isOpen && (
         <div className="absolute top-0 left-0 w-full bg-white px-4 pt-24 pb-6 border-b border-gray-100 flex flex-col gap-4 shadow-xl z-40 animate-fadeIn">
           <a href="#about" onClick={() => setIsOpen(false)} className="text-gray-700 font-medium py-2 border-b border-gray-50">About</a>
@@ -58,7 +80,10 @@ export const Navbar: React.FC = () => {
           <a href="#projects" onClick={() => setIsOpen(false)} className="text-gray-700 font-medium py-2 border-b border-gray-50">Projects</a>
           <a href="#testimonials" onClick={() => setIsOpen(false)} className="text-gray-700 font-medium py-2 border-b border-gray-50">Testimonials</a>
           <a href="#faq" onClick={() => setIsOpen(false)} className="text-gray-700 font-medium py-2 border-b border-gray-50">FAQ</a>
-          <Button variant="primary" className="w-full mt-2">Let's Talk</Button>
+          
+          <a href="#contact" onClick={() => setIsOpen(false)} className="inline-block cursor-pointer w-full mt-2">
+            <Button variant="primary" className="w-full">Let's Talk</Button>
+          </a>
         </div>
       )}
     </nav>
