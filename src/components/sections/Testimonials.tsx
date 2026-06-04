@@ -2,7 +2,11 @@
 import React, { useState } from 'react';
 import { testimonialsData } from '../../data/mockData';
 
+// 1. Import gambar tanda petik dari folder assets
+import quoteImg from '../../assets/quote-icon.png'; 
+
 export const Testimonials: React.FC = () => {
+  // Set default index awal ke 1 (Sarah Tan) agar berada tepat di tengah saat pertama load
   const [activeIndex, setActiveIndex] = useState(1);
 
   return (
@@ -36,16 +40,20 @@ export const Testimonials: React.FC = () => {
                   <div
                     key={item.id}
                     onClick={() => setActiveIndex(idx)}
-                    className={`w-[320px] sm:w-[420px] shrink-0 bg-white border rounded-3xl p-8 shadow-sm transition-all duration-500 ease-in-out cursor-pointer relative flex flex-col items-center justify-between min-h-[280px] ${
+                    className={`w-[320px] sm:w-105 shrink-0 bg-white border rounded-3xl p-8 shadow-sm transition-all duration-500 ease-in-out cursor-pointer relative flex flex-col items-center justify-between min-h-70 ${
                       isActive 
                         ? 'opacity-100 scale-100 border-orange-500 shadow-md ring-1 ring-orange-100' 
                         : 'opacity-20 scale-95 border-gray-100 pointer-events-auto blur-[1px] hover:opacity-40'
                     }`}
                   >
-                    {/* Tanda Kutip Oranye Menggantung */}
+                    {/* PERUBAHAN DI SINI: Mengganti teks petik lama dengan tag img dari aset lokal */}
                     {isActive && (
-                      <div className="absolute -top-5 left-10 bg-[#FF6433] text-white w-10 h-8 flex items-center justify-center font-serif text-3xl rounded-lg shadow-sm">
-                        “”
+                      <div className="absolute -top-5 left-10 w-10 h-10 flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
+                        <img 
+                          src={quoteImg} 
+                          alt="Quote Icon" 
+                          className="w-full h-full object-contain filter drop-shadow-sm"
+                        />
                       </div>
                     )}
 

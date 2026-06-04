@@ -7,6 +7,7 @@ import { Process } from '../components/sections/Process';
 import { Services } from '../components/sections/Services';
 import { Showcase } from '../components/sections/Showcase';
 import { Testimonials } from '../components/sections/Testimonials';
+import { FAQ } from '../components/sections/FAQ';
 
 export const Home: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ export const Home: React.FC = () => {
         <Services />
         <Showcase />
         <Testimonials />
+        <FAQ />
       </main>
     </div>
   );
